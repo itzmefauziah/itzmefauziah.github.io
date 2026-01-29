@@ -41,7 +41,7 @@ body {
 /* =============== HERO =============== */
 .hero {
   height: 100vh;
-  background-image: url("GoTurkiyeHero Section.png");
+  background-image: src("GoTurkiyeHero Section.png");
   background-size: cover;
   background-position: center;
   position: relative;
