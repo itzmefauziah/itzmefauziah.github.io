@@ -12,12 +12,15 @@ body {
 /* ================= NAVBAR ================= */
 .navbar {
   width: 100%;
+  position: fixed; /* stays on top when scrolling */
+  top: 0;
+  left: 0;
+  z-index: 10;
   padding: 24px 64px;
   display: flex;
-  justify-content: center; /* centers navbar-content horizontally */
-  position: absolute;
-  top: 0;
-  z-index: 10;
+  justify-content: center; /* centers navbar-content */
+  background: rgba(255, 255, 255, 0.8); /* slight transparent bg */
+  backdrop-filter: blur(8px); /* optional glass effect */
 }
 
 .navbar-content {
@@ -25,7 +28,6 @@ body {
   align-items: center;
   gap: 64px; /* space between logo and links */
 }
-
 
 .logo {
   font-size: 20px;
@@ -57,12 +59,13 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 90px;
+  text-align: center;
 }
 
-/* overlay for text readability */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -74,7 +77,6 @@ body {
   );
 }
 
-/* ================= HERO CONTENT ================= */
 .hero-content {
   position: relative;
   max-width: 520px;
@@ -117,12 +119,15 @@ body {
     padding: 20px 30px;
   }
 
-  .navbar ul {
+  .navbar-content {
+    flex-direction: column; /* stack logo + menu */
     gap: 16px;
   }
 
-  .hero {
-    padding-left: 32px;
+  .navbar ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero-content h1 {
@@ -132,6 +137,11 @@ body {
   .hero-content p {
     font-size: 16px;
   }
+
+  .btn {
+    padding: 12px 24px;
+  }
 }
+
 
 
