@@ -17,10 +17,10 @@ font-family: "Denk One", system-ui, sans-serif;
   display: flex;
   justify-content: center; /* Centered navigation */
   align-items: center;
-  position: absolute; /* Absolute allows it to sit on top of the image */
   top: 0;
   left: 0;
   z-index: 10;
+  position: fixed;
 }
 
 .navbar ul {
@@ -52,8 +52,7 @@ font-family: "Denk One", system-ui, sans-serif;
   background-image: url("https://github.com/itzmefauziah/itzmefauziah.github.io/blob/be20f28f07a210c66488658ac37b8393f9bb381e/image/GoTurkiyeHeroSection.png"); 
   background-size: cover;
   background-position: center;
-  position: relative;
-  
+  position: relative;  
   display: flex;
   align-items: center; /* Vertically center */
 }
@@ -103,7 +102,7 @@ font-family: "Denk One", system-ui, sans-serif;
   color: #1a1a1a;
   text-decoration: none;
   font-size: 22px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Denk One", system-ui, sans-serif;
   font-weight: 400;
   border-radius: 0px; /* Sharp corners */
   transition: background-color 0.25s ease, transform 0.2s ease;
