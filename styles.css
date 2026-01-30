@@ -49,7 +49,7 @@ font-family: "Denk One", system-ui, sans-serif;
 .hero {
   height: 100vh;
   /* Ensure you have the image file in the correct folder */
-  background-image: url("image/GoTurkiyeHeroSection.png"); 
+  background-image: url("https://github.com/itzmefauziah/itzmefauziah.github.io/blob/be20f28f07a210c66488658ac37b8393f9bb381e/image/GoTurkiyeHeroSection.png"); 
   background-size: cover;
   background-position: center;
   position: relative;
