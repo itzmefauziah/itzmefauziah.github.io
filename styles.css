@@ -57,7 +57,6 @@ body {
   
   display: flex;
   align-items: center; /* Vertically center */
-  justify-content: flex-start; /* Align content to the left */
 }
 
 .hero-overlay {
