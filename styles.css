@@ -140,9 +140,16 @@ font-family: "Denk One", system-ui, sans-serif;
     font-size: 18px;
   }
 }
+.destination {
+  padding: 80px 5%;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center everything horizontally */
+}
+
 .destination-header {
-  text-align: center;
-  justify-content: center;
+  text-align: center; /* Center text */
   margin-bottom: 60px;
 }
 
@@ -150,7 +157,7 @@ font-family: "Denk One", system-ui, sans-serif;
   font-size: 38px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #1a1a1a; /* Matches navbar text color */
+  color: #1a1a1a;
 }
 
 .destination-header p {
@@ -158,16 +165,11 @@ font-family: "Denk One", system-ui, sans-serif;
   color: #555;
 }
 
-.destination {
-  padding: 80px 5%;
-  background-color: #f8f8f8;
-}
-
 .destination-container {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: center;
+  justify-content: center; /* Center the cards horizontally */
 }
 
 .destination-card {
@@ -211,9 +213,14 @@ font-family: "Denk One", system-ui, sans-serif;
   .destination-container {
     flex-direction: column;
     gap: 30px;
+    align-items: center; /* Keep cards centered on mobile */
+  }
+
+  .destination-header h2 {
+    font-size: 32px;
+  }
+
+  .destination-header p {
+    font-size: 16px;
   }
 }
-
-
-
-
