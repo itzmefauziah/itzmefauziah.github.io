@@ -142,6 +142,7 @@ font-family: "Denk One", system-ui, sans-serif;
 }
 .destination-header {
   text-align: center;
+  justify-content: center;
   margin-bottom: 60px;
 }
 
@@ -156,8 +157,6 @@ font-family: "Denk One", system-ui, sans-serif;
   font-size: 18px;
   color: #555;
 }
-
-/* Keep existing destination-container and destination-card styles */
 
 .destination {
   padding: 80px 5%;
