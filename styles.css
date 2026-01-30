@@ -42,7 +42,7 @@ body {
 .hero {
   height: 100vh;
   background-image: url("image/GoTurkiyeHeroSection.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
