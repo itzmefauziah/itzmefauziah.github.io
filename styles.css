@@ -25,9 +25,12 @@ body {
 
 .navbar-content {
   display: flex;
-  align-items: center;
-  gap: 30px; /* space between logo and links */
+  align-items: center; /* vertically center logo and menu */
+  justify-content: space-between; /* push logo to left, menu to right */
+  width: 100%;
+  max-width: 1200px; /* keeps navbar from stretching too wide */
 }
+
 
 .logo {
   font-size: 20px;
@@ -39,7 +42,9 @@ body {
   list-style: none;
   display: flex;
   gap: 32px;
+  margin-left: auto; /* pushes the menu to the right side of logo */
 }
+
 
 .navbar a {
   text-decoration: none;
