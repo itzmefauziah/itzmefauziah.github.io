@@ -12,25 +12,17 @@ body {
 /* ================= NAVBAR ================= */
 .navbar {
   width: 100%;
-  position: fixed; /* stays on top when scrolling */
+  padding: 24px 64px;
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center; /* vertically center items */
+  position: fixed; /* stays on top */
   top: 0;
   left: 0;
   z-index: 10;
-  padding: 24px 64px;
-  display: flex;
-  justify-content: center; /* centers navbar-content */
-  background: rgba(255, 255, 255, 0.8); /* slight transparent bg */
+  background: rgba(255, 255, 255, 0.8); /* optional transparent bg */
   backdrop-filter: blur(8px); /* optional glass effect */
 }
-
-.navbar-content {
-  display: flex;
-  align-items: center; /* vertically center logo and menu */
-  justify-content: space-between; /* push logo to left, menu to right */
-  width: 100%;
-  max-width: 1200px; /* keeps navbar from stretching too wide */
-}
-
 
 .logo {
   font-size: 20px;
@@ -42,7 +34,8 @@ body {
   list-style: none;
   display: flex;
   gap: 32px;
-  margin-left: auto; /* pushes the menu to the right side of logo */
+  margin: 0; /* remove any default margin */
+  padding: 0;
 }
 
 
