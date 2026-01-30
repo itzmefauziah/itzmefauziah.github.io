@@ -38,16 +38,17 @@ body {
   font-weight: 500;
 }
 
-/* =============== HERO =============== */
+/* =============== HERO (FIXED CROPPING) =============== */
 .hero {
-  height: 100vh;
+  min-height: 85vh; /* FIX: avoid extreme zoom */
   background-image: url("image/GoTurkiyeHeroSection.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   position: relative;
   display: flex;
   align-items: center;
   padding-left: 80px;
+  overflow: hidden;
 }
 
 /* soft gradient overlay */
@@ -60,11 +61,13 @@ body {
     rgba(0,0,0,0.1) 50%,
     rgba(0,0,0,0) 100%
   );
+  z-index: 1;
 }
 
 /* content */
 .hero-content {
   position: relative;
+  z-index: 2;
   color: #fff;
   max-width: 520px;
 }
@@ -96,16 +99,19 @@ body {
 
 .btn:hover {
   background-color: #5aa6b3;
+  transform: translateY(-2px);
 }
 
 /* =============== RESPONSIVE =============== */
 @media (max-width: 768px) {
   .hero {
-    padding-left: 30px;
+    min-height: 70vh; /* FIX: mobile cropping */
+    padding-left: 20px;
+    background-position: center top;
   }
 
   .hero-content h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .navbar {
@@ -116,3 +122,4 @@ body {
     gap: 15px;
   }
 }
+
