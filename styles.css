@@ -140,6 +140,25 @@ font-family: "Denk One", system-ui, sans-serif;
     font-size: 18px;
   }
 }
+.destination-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.destination-header h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1a1a1a; /* Matches navbar text color */
+}
+
+.destination-header p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Keep existing destination-container and destination-card styles */
+
 .destination {
   padding: 80px 5%;
   background-color: #f8f8f8;
