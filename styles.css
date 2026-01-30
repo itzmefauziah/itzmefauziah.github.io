@@ -26,7 +26,7 @@ body {
 .navbar-content {
   display: flex;
   align-items: center;
-  gap: 64px; /* space between logo and links */
+  gap: 30px; /* space between logo and links */
 }
 
 .logo {
