@@ -140,6 +140,62 @@ font-family: "Denk One", system-ui, sans-serif;
     font-size: 18px;
   }
 }
+.destination {
+  padding: 80px 5%;
+  background-color: #f8f8f8;
+}
+
+.destination-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.destination-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+}
+
+.destination-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.destination-card .btn {
+  margin-bottom: 20px;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .destination-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 
 
 
