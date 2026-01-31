@@ -139,6 +139,10 @@ body {
 }
 
 .swiper-slide {
+    width: clamp(180px, 20vw, 300px); /* responsive width */
+  height: auto;                     /* let it scale */
+  display: flex;                    /* flex container */
+  flex-direction: column;           /* stack image + info */
   width: 300px;        /* Fixed card width */
   height: 400px;       /* Fixed card height */
   position: relative;
@@ -148,10 +152,11 @@ body {
 }
 
 .swiper-slide img {
+   width: 100%;
+  height: 200px;        /* fixed height for all images */
+  object-fit: cover;    /* crop excess without stretching */
+  border-radius: 10px 10px 0 0;  /* rounded top corners */
   display: block;
-  width: 100%;
-  height: 100%;        /* Fill the parent */
-  object-fit: cover;   /* Crop to fit */
 }
 
 .slide-info {
