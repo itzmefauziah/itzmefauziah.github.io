@@ -154,8 +154,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.5); /* Dark background for readability */
-  padding: 10px;
-  border-radius: 5px;
+  padding: 30px;
   max-width: 90%;
   color: #F8F5F0; 
 }
