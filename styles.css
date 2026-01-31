@@ -235,10 +235,9 @@ body {
 .guide-card h3 {
   font-size: 36px;
   margin-bottom: 10px;
+  color: #1F2933;
 }
-.guide-card .card-content h3 {
-  color: #1F2933 !important;
-}
+
 .guide-card p {
   font-size: 16px;
   color: #1F2933;
