@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <title>GoTürkiye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Denk+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Denk+One&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Google tag (gtag.js) -->
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HHLYBLB6R"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,28 +24,12 @@
     gtag('js', new Date());
     gtag('config', 'G-0HHLYBLB6R');
   </script>
-
 </head>
-<script>
-  const slider = document.querySelector('.slider');
-  const nextBtn = document.querySelector('.nav.next');
-  const prevBtn = document.querySelector('.nav.prev');
-
-  const cardWidth = document.querySelector('.card').offsetWidth + 20; // card width + gap
-
-  nextBtn.addEventListener('click', () => {
-    slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
-  });
-
-  prevBtn.addEventListener('click', () => {
-    slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-  });
-</script>
-
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <span class="logo" style="display:none;">GoTurkiye</span> 
+    <span class="logo">GoTurkiye</span>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Destinations</a></li>
@@ -47,81 +38,49 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
-    
     <div class="hero-content">
       <h1>Explore a Land<br>of Love</h1>
       <p>
-        A place where east meets west, and<br>
-        every city tells a story of beauty,<br>
-        history, and timeless charm.
+        A place where east meets west, and every city tells a story<br>
+        of beauty, history, and timeless charm.
       </p>
       <a href="#" class="btn">Discover More</a>
     </div>
   </section>
 
-
-<section class="destination">
-  <!-- Section Header -->
-  <div class="destination-header">
-    <h2 class="title">Top Destinations in Turkey</h2>
-    <p>
-      Explore Turkey’s most iconic cities and breathtaking landscapes,
-      where history, culture, and natural beauty come together.
-    </p>
-  </div>
-
-    <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="1.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="2.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="3.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="4.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="5.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="6.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="7.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="8.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="1.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="2.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="3.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="4.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="5.jpg" alt="">
-      </div>
-
-      <!-- 15 div -->
-    
+  <!-- Destinations Section -->
+  <section class="destination">
+    <div class="destination-header">
+      <h2 class="title">Top Destinations in Turkey</h2>
+      <p>
+        Explore Turkey’s most iconic cities and breathtaking landscapes,
+        where history, culture, and natural beauty come together.
+      </p>
     </div>
-  </div>
 
+    <!-- Swiper Carousel -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="1.jpg" alt="Destination 1"></div>
+        <div class="swiper-slide"><img src="2.jpg" alt="Destination 2"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="Destination 3"></div>
+        <div class="swiper-slide"><img src="4.jpg" alt="Destination 4"></div>
+        <div class="swiper-slide"><img src="5.jpg" alt="Destination 5"></div>
+        <div class="swiper-slide"><img src="6.jpg" alt="Destination 6"></div>
+        <div class="swiper-slide"><img src="7.jpg" alt="Destination 7"></div>
+        <div class="swiper-slide"><img src="8.jpg" alt="Destination 8"></div>
+      </div>
+      <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-    
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -132,6 +91,7 @@
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
+      loop: true,
       coverflowEffect: {
         rotate: 15,
         stretch: 0,
@@ -139,12 +99,16 @@
         modifier: 1,
         slideShadows: true,
       },
-      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
   </script>
+
 </body>
 </html>
-
-
-
-
