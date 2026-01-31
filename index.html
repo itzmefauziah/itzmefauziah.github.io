@@ -108,6 +108,11 @@
           <p>Home to ancient Roman ruins and one of the best-preserved classical cities.</p>
         </div>
       </div>
+    <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
 
 
@@ -131,6 +136,14 @@
       modifier: 1,
       slideShadows: true,
     },
+     navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     
   });
 </script>
