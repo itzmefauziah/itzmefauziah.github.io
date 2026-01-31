@@ -50,57 +50,103 @@
     </div>
   </section>
 
-  <!-- Destinations Section -->
-  <section class="destination">
-    <div class="destination-header">
-      <h2 class="title">Top Destinations in Turkey</h2>
-      <p>
-        Explore Turkey’s most iconic cities and breathtaking landscapes,
-        where history, culture, and natural beauty come together.
-      </p>
-    </div>
+  
+<!-- Destinations Section -->
+<section class="destination">
+  <div class="destination-header">
+    <h2 class="title">Top Destinations in Turkey</h2>
+    <p>
+      Explore Turkey’s most iconic cities and breathtaking landscapes,
+      where history, culture, and natural beauty come together.
+    </p>
+  </div>
 
-    <!-- Swiper Carousel -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="image/istanbul.jpg" alt="Destination 1"></div>
-        <div class="swiper-slide"><img src="image/cappodocia.jpg" alt="Destination 2"></div>
-        <div class="swiper-slide"><img src="image/pamukkale.jpg" alt="Destination 3"></div>
-        <div class="swiper-slide"><img src="image/antalya.jpg" alt="Destination 4"></div>
-        <div class="swiper-slide"><img src="image/ephesus.jpg" alt="Destination 5"></div>
+  <!-- Swiper Carousel -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="image/istanbul.jpg" alt="Istanbul">
+        <div class="slide-info">
+          <h3>Istanbul</h3>
+          <p>The vibrant city where East meets West, full of history and stunning architecture.</p>
+        </div>
       </div>
-      <!-- Navigation -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="image/cappodocia.jpg" alt="Cappadocia">
+        <div class="slide-info">
+          <h3>Cappadocia</h3>
+          <p>Famous for its fairy chimneys, hot air balloons, and unique landscapes.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="image/pamukkale.jpg" alt="Pamukkale">
+        <div class="slide-info">
+          <h3>Pamukkale</h3>
+          <p>Known for its white terraces of mineral-rich thermal waters and ancient ruins.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <img src="image/antalya.jpg" alt="Antalya">
+        <div class="slide-info">
+          <h3>Antalya</h3>
+          <p>A stunning Mediterranean city with beautiful beaches and historic sites.</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <img src="image/ephesus.jpg" alt="Ephesus">
+        <div class="slide-info">
+          <h3>Ephesus</h3>
+          <p>Home to ancient Roman ruins and one of the best-preserved classical cities.</p>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      loop: true,
-      coverflowEffect: {
-        rotate: 15,
-        stretch: 0,
-        depth: 300,
-        modifier: 1,
-        slideShadows: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    coverflowEffect: {
+      rotate: 15,
+      stretch: 0,
+      depth: 300,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
 
 </body>
 </html>
