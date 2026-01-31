@@ -1,16 +1,42 @@
-document.querySelectorAll(".destination-card").forEach(card => {
-  card.addEventListener("mousemove", e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+<script>
+const slider = document.querySelector('.slider');
+const nextBtn = document.querySelector('.nav.next');
+const prevBtn = document.querySelector('.nav.prev');
+const cards = document.querySelectorAll('.card');
 
-    const rotateX = -(y - rect.height / 2) / 15;
-    const rotateY = (x - rect.width / 2) / 15;
+const cardWidth = cards[0].offsetWidth + 20; // card width + gap
 
-    card.style.transform += ` rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = card.style.transform.replace(/rotateX.*rotateY.*$/, "");
-  });
+// Scroll Buttons
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
 });
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+});
+
+// Active Card Highlight
+function updateActiveCard() {
+  const sliderCenter = slider.scrollLeft + slider.offsetWidth / 2;
+  let closestCard = null;
+  let closestDistance = Infinity;
+
+  cards.forEach(card => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const distance = Math.abs(sliderCenter - cardCenter);
+    if(distance < closestDistance) {
+      closestDistance = distance;
+      closestCard = card;
+    }
+  });
+
+  cards.forEach(card => card.classList.remove('active'));
+  if(closestCard) closestCard.classList.add('active');
+}
+
+// Run on scroll
+slider.addEventListener('scroll', updateActiveCard);
+
+// Initialize
+updateActiveCard();
+</script>
