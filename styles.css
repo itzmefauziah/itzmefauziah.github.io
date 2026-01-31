@@ -153,12 +153,13 @@ body {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Dark background for readability */
   padding: 10px;
   border-radius: 5px;
   max-width: 90%;
+  color: #fff; 
 }
-.slider-info p{
+.slide-info p{
   color: #1F2933;
 }
 /* ================= RESPONSIVE ================= */
@@ -183,26 +184,27 @@ body {
   }
 
 .swiper-slide {
-    width: 90%; /* slides take most of the screen width */
-    color: #000; /* black text for readability */
+    width: 90%;
   }
 
-  /* Move text below image */
+  /* Mobile Slide Info: No overlay, dark text */
   .slide-info {
-    position: static; /* remove overlay */
-    background: none; /* no background overlay */
-    color: #000;
-    padding: 10px 0 0 0;
+    position: static; /* Stack below image */
+    background: none; /* Remove dark background */
     transform: none;
     max-width: 100%;
+    padding-top: 10px;
+    text-align: center; /* Or left, depending on preference */
   }
 
   .slide-info h3 {
-    font-size: 1.2rem;
+    color: #000;
     margin: 5px 0;
   }
 
+  /* THIS IS THE FIX: Target .slide-info (not slider-info) */
   .slide-info p {
+    color: #1F2933; /* Dark Grey color now visible! */
     font-size: 0.9rem;
   }
 }
