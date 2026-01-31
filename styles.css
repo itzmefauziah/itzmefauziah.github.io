@@ -99,12 +99,11 @@ font-family: "Denk One", system-ui, sans-serif;
   display: inline-block;
   padding: 18px 45px;
   background-color: #7AC5D3; /* The specific teal color from the image */
-  color: #1a1a1a;
+  color: #1F2933;
   text-decoration: none;
   font-size: 22px;
   font-family: "Denk One", system-ui, sans-serif;
   font-weight: 400;
-  border-radius: 0px; /* Sharp corners */
   transition: background-color 0.25s ease, transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
