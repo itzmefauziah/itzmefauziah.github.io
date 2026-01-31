@@ -157,6 +157,8 @@ body {
   padding: 10px;
   border-radius: 5px;
   max-width: 90%;
+}
+.slider-info p{
   color: #1F2933;
 }
 /* ================= RESPONSIVE ================= */
