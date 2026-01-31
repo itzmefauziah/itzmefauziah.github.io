@@ -177,20 +177,12 @@ body {
   font-size: 1rem;
   margin-top: 10px;
   font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-  
   /* Limit width so lines don't get too long */
   max-width: 80%; 
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Highlight the word "Description:" if you add a span in HTML, 
-   or just for general bold text */
-.slide-info strong {
-  color: #fff;
-  font-weight: 700;
-}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .navbar ul {
