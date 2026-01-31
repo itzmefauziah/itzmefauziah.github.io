@@ -105,7 +105,6 @@ body {
   font-size: 22px;
   font-weight: 400;
   transition: background-color 0.25s, transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
