@@ -22,13 +22,14 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: ##fffaf5;
+  background-color: #fffaf5;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
   font-size: 24px;
   font-weight: 700;
+  color: #f5f5f5;
 }
 
 .navbar ul {
