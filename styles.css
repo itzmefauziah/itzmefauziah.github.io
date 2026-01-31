@@ -204,7 +204,7 @@ body {
 }
 
 .guide-header h2 {
-  font-size: 2.3rem;
+  font-size: 36px;
   margin-bottom: 10px;
   color: #1F2933;
   text-align: center;
@@ -214,7 +214,7 @@ body {
   color: #1F2933;
   max-width: 600px;
   margin: 0 auto 50px;
-  font-size: 1.05rem;
+  font-size: 16px;
 }
 
 .guide-cards {
