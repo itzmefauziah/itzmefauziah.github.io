@@ -22,7 +22,6 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  color: #1F2933;
 }
 
 .navbar .logo {
@@ -38,7 +37,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: #fff;
+ color: #1F2933;
   font-size: 18px;
   font-weight: 600;
   transition: color 0.2s;
