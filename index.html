@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <title>GoTürkiye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!----Google Font---!>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Denk+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Denk+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -15,7 +16,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (untouched) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HHLYBLB6R"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -46,134 +47,133 @@
         A place where east meets west, and every city tells a story
         of beauty, history, and timeless charm.
       </p>
-      <a href="#" class="btn">Discover More</a>
+      <a href="#destination" class="btn">Discover More</a>
     </div>
   </section>
 
-  
-<!-- Destinations Section -->
-<section class="destination" id="destination">
-  <div class="destination-header">
-    <h2 class="title">Top Destinations in Türkiye</h2>
-    <p>
-      Explore Türkiye’s most iconic cities and breathtaking landscapes,
-      where history, culture, and natural beauty come together.
-    </p>
-  </div>
+  <!-- Destinations Section -->
+  <section class="destination" id="destination">
+    <div class="destination-header">
+      <h2 class="title">Top Destinations in Türkiye</h2>
+      <p>
+        Explore Türkiye’s most iconic cities and breathtaking landscapes,
+        where history, culture, and natural beauty come together.
+      </p>
+    </div>
 
-  <!-- Swiper Carousel -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="image/istanbul.jpg" alt="Istanbul">
-        <div class="slide-info">
-          <h3>Istanbul</h3>
-          <p>The vibrant city where East meets West, full of history and stunning architecture.</p>
+    <!-- Swiper Carousel -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="image/istanbul.jpg" alt="Istanbul">
+          <div class="slide-info">
+            <h3>Istanbul</h3>
+            <p>The vibrant city where East meets West, full of history and stunning architecture.</p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="image/cappodocia.jpg" alt="Cappadocia">
+          <div class="slide-info">
+            <h3>Cappadocia</h3>
+            <p>Famous for its fairy chimneys, hot air balloons, and unique landscapes.</p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="image/pamukkale.jpg" alt="Pamukkale">
+          <div class="slide-info">
+            <h3>Pamukkale</h3>
+            <p>Known for its white terraces of mineral-rich thermal waters and ancient ruins.</p>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <img src="image/antalya.jpg" alt="Antalya">
+          <div class="slide-info">
+            <h3>Antalya</h3>
+            <p>A stunning Mediterranean city with beautiful beaches and historic sites.</p>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <img src="image/ephesus.jpg" alt="Ephesus">
+          <div class="slide-info">
+            <h3>Ephesus</h3>
+            <p>Home to ancient Roman ruins and one of the best-preserved classical cities.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="image/cappodocia.jpg" alt="Cappadocia">
-        <div class="slide-info">
-          <h3>Cappadocia</h3>
-          <p>Famous for its fairy chimneys, hot air balloons, and unique landscapes.</p>
-        </div>
-      </div>
+      <!-- Swiper Navigation & Pagination -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img src="image/pamukkale.jpg" alt="Pamukkale">
-        <div class="slide-info">
-          <h3>Pamukkale</h3>
-          <p>Known for its white terraces of mineral-rich thermal waters and ancient ruins.</p>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <img src="image/antalya.jpg" alt="Antalya">
-        <div class="slide-info">
-          <h3>Antalya</h3>
-          <p>A stunning Mediterranean city with beautiful beaches and historic sites.</p>
-        </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="swiper-slide">
-        <img src="image/ephesus.jpg" alt="Ephesus">
-        <div class="slide-info">
-          <h3>Ephesus</h3>
-          <p>Home to ancient Roman ruins and one of the best-preserved classical cities.</p>
-        </div>
-      </div>
-
-</section>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-<!-- Your custom slider JS -->
-<script src="slider.js"></script>
-
-<section class="travel-guides" id="travel-guides">
+  <!-- Travel Guides Section -->
+  <section class="travel-guides" id="travel-guides">
     <div class="guide-header">
-    <h2>Travel Guide for Turkey</h2>
-    <p>Everything you need to know before traveling to Turkey.</p>
-  </div>
-
-  <div class="guide-cards">
-    <!-- Visa & Entry -->
-    <div class="guide-card">
-      <img src="images/visa-entry.jpg" alt="Visa and Entry">
-      <div class="card-content">
-        <h3>Visa & Entry</h3>
-        <p>
-          Most travelers can enter Turkey visa-free or with an e-Visa.
-          Ensure your passport is valid for at least 6 months.
-        </p>
-      </div>
+      <h2>Travel Guide for Turkey</h2>
+      <p>Everything you need to know before traveling to Turkey.</p>
     </div>
 
-    <!-- Getting Around -->
-    <div class="guide-card">
-      <img src="images/transport.jpg" alt="Getting Around Turkey">
-      <div class="card-content">
-        <h3>Getting Around</h3>
-        <p>
-          Domestic flights, buses, trains, metros, and taxis make
-          traveling around Turkey easy and affordable.
-        </p>
+    <div class="guide-cards">
+      <!-- Visa & Entry -->
+      <div class="guide-card">
+        <img src="image/visa-entry.jpg" alt="Visa and Entry">
+        <div class="card-content">
+          <h3>Visa & Entry</h3>
+          <p>
+            Most travelers can enter Turkey visa-free or with an e-Visa.
+            Ensure your passport is valid for at least 6 months.
+          </p>
+        </div>
+      </div>
+      <!-- Getting Around -->
+      <div class="guide-card">
+        <img src="image/transport.jpg" alt="Getting Around Turkey">
+        <div class="card-content">
+          <h3>Getting Around</h3>
+          <p>
+            Domestic flights, buses, trains, metros, and taxis make
+            traveling around Turkey easy and affordable.
+          </p>
+        </div>
+      </div>
+      <!-- Food & Culture -->
+      <div class="guide-card">
+        <img src="image/food.jpg" alt="Turkish Food and Culture">
+        <div class="card-content">
+          <h3>Food & Culture</h3>
+          <p>
+            Enjoy kebabs, baklava, and Turkish tea.
+            Respect local customs, especially at mosques.
+          </p>
+        </div>
+      </div>
+      <!-- Best Time -->
+      <div class="guide-card">
+        <img src="image/weather.jpg" alt="Best Time to Visit Turkey">
+        <div class="card-content">
+          <h3>Best Time to Visit</h3>
+          <p>
+            Spring and autumn offer pleasant weather.
+            Summer suits beaches, winter is ideal for snow lovers.
+          </p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Food & Culture -->
-    <div class="guide-card">
-      <img src="images/food.jpg" alt="Turkish Food and Culture">
-      <div class="card-content">
-        <h3>Food & Culture</h3>
-        <p>
-          Enjoy kebabs, baklava, and Turkish tea.
-          Respect local customs, especially at mosques.
-        </p>
-      </div>
-    </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- Best Time -->
-    <div class="guide-card">
-      <img src="images/weather.jpg" alt="Best Time to Visit Turkey">
-      <div class="card-content">
-        <h3>Best Time to Visit</h3>
-        <p>
-          Spring and autumn offer pleasant weather.
-          Summer suits beaches, winter is ideal for snow lovers.
-        </p>
-      </div>
-    </div>
-  </div>
-
-</section>
-
+  <!-- Custom JS -->
+  <script src="slider.js"></script>
 
 </body>
 </html>
+
