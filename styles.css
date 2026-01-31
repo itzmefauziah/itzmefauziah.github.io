@@ -122,6 +122,7 @@ body {
 .destination-header h2 {
   font-size: 36px;
   margin-bottom: 10px;
+  color: #1F2933;
 }
 
 .destination-header p {
@@ -130,6 +131,7 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  color: #1F2933;
 }
 
 /* ================= SWIPER ================= */
