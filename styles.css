@@ -149,7 +149,6 @@ body {
   width: 100%;
   display: block;
   border-radius: 10px;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
 }
 
 /* ================= RESPONSIVE ================= */
