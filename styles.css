@@ -237,5 +237,67 @@ font-family: "Denk One", system-ui, sans-serif;
     transform: rotateY(360deg);
   }
 }
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .destination {
+    padding: 60px 20px;
+  }
+
+  .destination-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .destination-header p {
+    font-size: 0.95rem;
+  }
+
+  /* Disable 3D rotation on mobile */
+  .carousel-container {
+    perspective: none;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    transform: none !important;
+    animation: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .destination-card {
+    position: relative;
+    min-width: 260px;
+    height: 380px;
+    transform: none !important;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  .destination-card img {
+    height: 160px;
+  }
+
+  .destination-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .destination-card p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+}
 
 
