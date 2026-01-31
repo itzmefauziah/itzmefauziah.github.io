@@ -18,6 +18,21 @@
   </script>
 
 </head>
+<script>
+  const slider = document.querySelector('.slider');
+  const nextBtn = document.querySelector('.nav.next');
+  const prevBtn = document.querySelector('.nav.prev');
+
+  const cardWidth = document.querySelector('.card').offsetWidth + 20; // card width + gap
+
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+</script>
 
 <body>
 
