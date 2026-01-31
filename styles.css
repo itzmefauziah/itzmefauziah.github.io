@@ -154,13 +154,9 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 30px 20px; /* Space from bottom and sides */
-  
-  /* The "Secret Sauce": A subtle gradient from bottom up 
-     so white text is readable even on light images */
+  padding: 30px 20px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
-  
-  text-align: center; /* Center the text like the image */
+  text-align: flex-start; /* Center the text like the image */
   z-index: 10;
 }
 
