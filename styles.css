@@ -119,7 +119,7 @@ body {
   width: 90%;
   margin: auto;
   text-align: center;
-  background-color: #F8F5F0;
+  background-color: #F5F5F5;
 }
 
 .destination-header h2 {
@@ -250,13 +250,6 @@ body {
   box-shadow: 0 14px 32px rgba(0,0,0,0.12);
 }
 
-/* ===== GALLERY SECTION ===== */
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 img {
   max-width: 100%;
