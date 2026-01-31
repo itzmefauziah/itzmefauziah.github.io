@@ -6,111 +6,149 @@
 }
 
 body {
-  /* Using Open Sans for body text */
-font-family: "Denk One", system-ui, sans-serif;
+  font-family: "Denk One", system-ui, sans-serif;
+  background-color: #01000c;
+  color: #fff;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
   width: 100%;
-  padding: 30px 0;
+  padding: 20px 50px;
   display: flex;
-  justify-content: center; /* Centered navigation */
+  justify-content: space-between;
   align-items: center;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  position: fixed;
+  z-index: 100;
+  background: rgba(0,0,0,0.5);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 60px; /* Wide spacing between links */
-  margin: 0;
-  padding: 0;
+  gap: 40px;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #1a1a1a; /* Dark text for menu */
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
 
 .navbar a:hover {
-  color: #555;
+  color: #7AC5D3;
 }
 
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
-  /* Ensure you have the image file in the correct folder */
-  background-image: url("image/GoTurkiyeHeroSection.png"); 
+  width: 100%;
+  background-image: url("image/GoTurkiyeHeroSection.png");
   background-size: cover;
   background-position: center;
-  position: relative;  
   display: flex;
-  align-items: center; /* Vertically center */
+  align-items: center;
+  position: relative;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* A slight dark gradient on the left to ensure white text pops */
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0) 100%
   );
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;
   max-width: 600px;
-  margin-left: 8%; /* Push text inward from the left edge */
-  color: #fff;
-  text-align: left; /* Ensure text aligns left */
+  margin-left: 8%;
 }
 
 .hero-content h1 {
-  font-size: 46px; /* Large header */
+  font-size: 46px;
   font-weight: 400;
   line-height: 1.1;
-  margin-top: 20px;
   margin-bottom: 20px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .hero-content p {
   font-size: 24px;
-  font-weight: 600; /* Bold subtext */
+  font-weight: 600;
   line-height: 1.4;
   margin-bottom: 40px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
   padding: 18px 45px;
-  background-color: #7AC5D3; /* The specific teal color from the image */
+  background-color: #7AC5D3;
   color: #1F2933;
   text-decoration: none;
   font-size: 22px;
-  font-family: "Denk One", system-ui, sans-serif;
   font-weight: 400;
-  transition: background-color 0.25s ease, transform 0.2s ease;
+  transition: background-color 0.25s, transform 0.2s;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
   background-color: #65aab7;
   transform: translateY(-2px);
+}
+
+/* ================= DESTINATION ================= */
+.destination {
+  padding: 100px 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.destination-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.destination-header p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= SWIPER ================= */
+.swiper {
+  width: 80%;
+  padding-bottom: 60px;
+  margin: auto;
+}
+
+.swiper-slide {
+  width: 250px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -120,11 +158,6 @@ font-family: "Denk One", system-ui, sans-serif;
     font-size: 14px;
   }
 
-  .hero {
-    justify-content: center;
-    text-align: center;
-  }
-
   .hero-content {
     margin-left: 0;
     text-align: center;
@@ -132,40 +165,14 @@ font-family: "Denk One", system-ui, sans-serif;
   }
 
   .hero-content h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .hero-content p {
     font-size: 18px;
   }
-}
-
-body{
-    height: 100vh;
-    background-color: #01000c;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-h1{
-    color: #fff;
-    font-size: 55px;
-    margin: 80px 0;
-}
-.swiper {
-    width: 80%;
-    height: 100%;
-  }
 
   .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 250px;
+    width: 180px;
   }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
-  }
+}
