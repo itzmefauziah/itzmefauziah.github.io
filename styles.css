@@ -152,7 +152,7 @@ body {
   position: absolute;
   bottom: 15px;
   left: 50%;
-  transform: translateX(-50%);
+
   background: rgba(0, 0, 0, 0.5); /* Dark background for readability */
   padding: 30px;
   max-width: 90%;
