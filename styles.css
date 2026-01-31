@@ -139,15 +139,25 @@ body {
 }
 
 .swiper-slide {
-  width: 250px;
+  width: 300px; /* adjust as needed */
+  text-align: center;
+  color: #fff;
 }
 
 .swiper-slide img {
   width: 100%;
-  display: block;
   border-radius: 10px;
 }
-
+.slide-info {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 90%;
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .navbar ul {
@@ -169,7 +179,28 @@ body {
     font-size: 18px;
   }
 
-  .swiper-slide {
-    width: 180px;
+.swiper-slide {
+    width: 90%; /* slides take most of the screen width */
+    color: #000; /* black text for readability */
   }
+
+  /* Move text below image */
+  .slide-info {
+    position: static; /* remove overlay */
+    background: none; /* no background overlay */
+    color: #000;
+    padding: 10px 0 0 0;
+    transform: none;
+    max-width: 100%;
+  }
+
+  .slide-info h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+
+  .slide-info p {
+    font-size: 0.9rem;
+  }
+}
 }
