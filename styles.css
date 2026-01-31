@@ -139,164 +139,138 @@ font-family: "Denk One", system-ui, sans-serif;
     font-size: 18px;
   }
 }
+/* ================= DESTINATION SECTION ================= */
 .destination {
-  padding: 80px 0;
-  background: #F8F5F0;
-  color: #1F2933;
+  padding: 60px 20px;
+  background-color: #fff;
   text-align: center;
 }
 
-.destination-header h2 {
-  font-size: 2.5rem;
+.destination-header .title {
+  font-size: 2rem;
   margin-bottom: 10px;
+  color: #222;
 }
 
 .destination-header p {
-  opacity: 0.8;
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
 }
 
-/* 3D setup */
-.carousel-container {
-  margin-top: 60px;
-  perspective: 1200px;
-}
-
-.carousel {
+/* ================= SLIDER WRAPPER ================= */
+.slider-wrapper {
   position: relative;
-  width: 300px;
-  height: 420px;
-  margin: auto;
-  transform-style: preserve-3d;
-  animation: spin 20s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel:hover {
-  animation-play-state: paused;
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
 }
 
-/* Cards */
-.destination-card {
-  position: absolute;
-  width: 280px;
-  height: 400px;
-  background: #020617;
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
-.destination-card img {
+/* ================= CARD ================= */
+.card {
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card.active {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
   width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   height: 180px;
   object-fit: cover;
 }
 
-.destination-card h3 {
+.card h3 {
   margin: 15px 0 5px;
+  font-size: 1.2rem;
+  color: #333;
 }
 
-.destination-card p {
+.card p {
   font-size: 0.9rem;
-  padding: 0 20px;
-  opacity: 0.85;
+  color: #777;
+  margin-bottom: 15px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 22px;
-  background: #38bdf8;
-  color: #020617;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
+.card button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-/* 3D positions */
-.destination-card:nth-child(1) {
-  transform: rotateY(0deg) translateZ(480px);
-}
-.destination-card:nth-child(2) {
-  transform: rotateY(90deg) translateZ(480px);
-}
-.destination-card:nth-child(3) {
-  transform: rotateY(180deg) translateZ(480px);
-}
-.destination-card:nth-child(4) {
-  transform: rotateY(270deg) translateZ(480px);
+.card button:hover {
+  background-color: #ff4757;
 }
 
-/* Rotation animation */
-@keyframes spin {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+/* ================= NAV BUTTONS ================= */
+.nav {
+  background-color: rgba(0,0,0,0.1);
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.3s ease;
+  z-index: 10;
 }
-/* ================= MOBILE RESPONSIVE ================= */
+
+.nav:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-
-  .destination {
-    padding: 60px 20px;
+  .card {
+    min-width: 200px;
   }
 
-  .destination-header h2 {
-    font-size: 1.8rem;
+  .destination-header .title {
+    font-size: 1.5rem;
   }
 
   .destination-header p {
-    font-size: 0.95rem;
-  }
-
-  /* Disable 3D rotation on mobile */
-  .carousel-container {
-    perspective: none;
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto;
-    display: flex;
-    gap: 20px;
-    transform: none !important;
-    animation: none;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 20px;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-  .destination-card {
-    position: relative;
-    min-width: 260px;
-    height: 380px;
-    transform: none !important;
-    scroll-snap-align: center;
-    flex-shrink: 0;
-  }
-
-  .destination-card img {
-    height: 160px;
-  }
-
-  .destination-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .destination-card p {
-    font-size: 0.85rem;
-  }
-
-  .btn {
-    font-size: 0.85rem;
-    padding: 8px 18px;
+    font-size: 0.9rem;
   }
 }
-
-
