@@ -43,9 +43,6 @@ body {
   transition: color 0.2s;
 }
 
-.navbar a:hover {
-  color: #7AC5D3;
-}
 
 /* ================= HERO ================= */
 .hero {
