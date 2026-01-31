@@ -139,11 +139,20 @@ body {
 }
 
 .swiper-slide {
-  width: 300px; 
-  position: relative; /* CRITICAL: Keeps the info inside the slide */
-  overflow: hidden;   /* Keeps the gradient from spilling out */
-  border-radius: 10px;
+  width: clamp(180px, 20vw, 300px); 
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;  
 }
+.swiper-slide img {
+  width: 100%;           /* still fills slide width */
+  height: auto;          /* keeps aspect ratio */
+  max-height: 250px;     /* new limit */
+  object-fit: cover;     /* crops excess but keeps center */
+  border-radius: 10px;
+  display: block;
+}
+
 
 .slide-info {
   position: absolute;
