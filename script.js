@@ -1,4 +1,4 @@
-<script>
+
 const slider = document.querySelector('.slider');
 const nextBtn = document.querySelector('.nav.next');
 const prevBtn = document.querySelector('.nav.prev');
@@ -39,4 +39,3 @@ slider.addEventListener('scroll', updateActiveCard);
 
 // Initialize
 updateActiveCard();
-</script>
