@@ -186,15 +186,6 @@ body {
   line-height: 1.4;
 }
 
-/* Swiper navigation arrows */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #7AC5D3;
-}
-
-.swiper-pagination-bullet {
-  background: #7AC5D3;
-}
 
 /* ================= TRAVEL GUIDE ================= */
 .travel-guides {
@@ -242,12 +233,12 @@ body {
 }
 
 .guide-card h3 {
-  font-size: 1.35rem;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .guide-card p {
-  font-size: 0.95rem;
+  font-size: 16px;
   color: #666;
   line-height: 1.6;
 }
