@@ -72,51 +72,76 @@
     </p>
   </div>
 
-  <!-- Carousel Wrapper -->
-  <div class="slider-wrapper">
-    <button class="nav prev">&#8592;</button>
-
-    <div class="slider">
-      <div class="card">
-        <img src="image/istanbul.jpg" alt="Istanbul">
-        <h3>Istanbul</h3>
-        <p>Description: Where east meets west, Istanbul blends history, culture, and modern city life.</p>
-        <button>VIEW MORE</button>
+    <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="4.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="5.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="6.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="7.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="8.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="4.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="5.jpg" alt="">
       </div>
 
-      <div class="card">
-        <img src="image/cappodocia.jpg" alt="Cappadocia">
-        <h3>Cappadocia</h3>
-        <p>Description:  Famous for its fairy chimneys, cave hotels, and magical hot air balloon views.</p>
-        <button>VIEW MORE</button>
-      </div>
-
-      <div class="card active">
-        <img src="image/antalya.jpg" alt="Antalya">
-        <h3>Antalya</h3>
-        <p>Description:  A Mediterranean paradise with turquoise waters, beaches, and ancient ruins.</p>
-        <button>VIEW MORE</button>
-      </div>
-
-      <div class="card">
-        <img src="image/pamukkale.jpg" alt="Pamukkale">
-        <h3>Pamukkale</h3>
-        <p>Description:  Natural white terraces filled with warm mineral waters and ancient wonders.</p>
-        <button>VIEW MORE</button>
-      </div>
-
-      <div class="card">
-        <img src="image/ephesus.jpg" alt="Ephesus">
-        <h3>Ephesus</h3>
-        <p>Description:  Step into ancient history with one of the best-preserved classical cities.</p>
-        <button>VIEW MORE</button>
-      </div>
+      <!-- 15 div -->
+    
     </div>
-
-    <button class="nav next">&#8594;</button>
   </div>
-</section>
-<<script src="slider.js"></script>
+
+
+    
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 15,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+    });
+  </script>
 </body>
 </html>
 
