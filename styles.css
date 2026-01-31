@@ -139,50 +139,39 @@ body {
 }
 
 .swiper-slide {
-  width: 300px; /* adjust as needed */
-  text-align: center;
-  color: #fff;
-}
-
-.swiper-slide img {
-  width: 100%;
+  width: 300px; 
+  position: relative; /* CRITICAL: Keeps the info inside the slide */
+  overflow: hidden;   /* Keeps the gradient from spilling out */
   border-radius: 10px;
 }
-/* ================= SLIDE INFO (POSTER STYLE) ================= */
+
 .slide-info {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  padding: 30px 20px;
+  width: 100%; /* Spans across the whole image */
+  padding: 40px 20px 20px; /* More padding at bottom */
+  
+  /* Create a dark gradient at the bottom so white text is readable */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
-  text-align: flex-start; /* Center the text like the image */
-  z-index: 10;
+  
+  text-align: left; /* Align left like your 'Istanbul' example */
+  box-sizing: border-box;
 }
 
-/* Big Title Style */
 .slide-info h3 {
-  font-size: 3rem; /* Very large text */
-  font-weight: 800; /* Extra bold */
-  text-transform: uppercase;
-  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
   margin: 0;
-  line-height: 1;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Drop shadow for pop */
+  color: #fff;
 }
 
-/* Description Style */
 .slide-info p {
-  color: #F5F5F5; /* Slightly off-white for hierarchy */
-  font-size: 1rem;
-  margin-top: 10px;
-  font-weight: 500;
-  /* Limit width so lines don't get too long */
-  max-width: 80%; 
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 5px 0 0;
+  line-height: 1.4;
 }
-
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .navbar ul {
