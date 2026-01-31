@@ -177,7 +177,7 @@ body {
 
 /* Description Style */
 .slide-info p {
-  color: #eee; /* Slightly off-white for hierarchy */
+  color: #F5F5F5; /* Slightly off-white for hierarchy */
   font-size: 1rem;
   margin-top: 10px;
   font-weight: 500;
