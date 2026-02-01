@@ -376,6 +376,8 @@ img {
 
 /* Bottom */
 .footer-bottom {
+  max-width: 1200px;       /* same as footer content */
+  margin: 40px auto 0;    /* center horizontally */
   border-top: 1px solid #fffaf5;
   margin-top: 40px;
   padding-top: 20px;
