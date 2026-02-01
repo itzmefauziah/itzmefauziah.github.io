@@ -136,6 +136,18 @@ body {
   margin-right: auto;
   color: #1F2933;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1F2933; /* your theme color */
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #fffaf5;
+}
+
 
 /* ================= SWIPER ================= */
 .swiper {
