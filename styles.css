@@ -376,7 +376,7 @@ img {
 
 /* Bottom */
 .footer-bottom {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #fffaf5;
   margin-top: 40px;
   padding-top: 20px;
   text-align: center;
@@ -384,7 +384,7 @@ img {
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #fffaf5;
 }
 
 /* ================= RESPONSIVE ================= */
