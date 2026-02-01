@@ -349,13 +349,14 @@ img {
   padding: 60px 20px 40px;
 }
 
+
 /* Layout */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 40px;
+  gap: 80px;
 }
 
 /* Brand */
@@ -394,6 +395,9 @@ img {
   font-size: 0.95rem;
   color: #fffaf5;
   transition: color 0.3s ease;
+}
+.footer-links {
+  justify-self: end; /* pushes the links to the far right of the container */
 }
 
 .footer-links a:hover {
