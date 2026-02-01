@@ -465,21 +465,30 @@ img {
 }
 
 @media (max-width: 768px) {
-  /* Navbar */
+   /* ================= NAVBAR ================= */
   .navbar {
     padding: 15px 20px;
   }
+
   .navbar ul {
-    gap: 10px;
+    display: flex;
+    flex-direction: column;   /* STACK links */
+    gap: 12px;                /* normal spacing */
     font-size: 14px;
+    align-items: flex-start;  /* left aligned */
   }
 
-  /* Hero */
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+  }
+    /* Hero */
   .hero-content {
     margin-left: 0;
     text-align: center;
     padding: 0 20px;
   }
+  
   .hero-content h1 {
     font-size: 36px;
   }
@@ -527,3 +536,5 @@ img {
     font-size: 0.9rem;
   }
 }
+
+  }
