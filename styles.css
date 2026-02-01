@@ -354,7 +354,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
 }
 
@@ -379,6 +379,8 @@ img {
 }
 
 .footer-links ul {
+  direction: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
 }
@@ -416,7 +418,7 @@ img {
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .footer-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .footer-brand {
