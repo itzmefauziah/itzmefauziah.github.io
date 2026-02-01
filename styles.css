@@ -374,21 +374,20 @@ img {
   color: #38bdf8;
 }
 
-/* Bottom */
+
 .footer-bottom {
-  max-width: 1200px;       /* same as footer content */
-  margin: 40px auto 0;    /* center horizontally */
-  border-top: 1px solid #fffaf5;
-  margin-top: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0;
   padding-top: 20px;
+  border-top: 1px solid #fffaf5;
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 0.85rem;
   color: #fffaf5;
-  text-align: center;
 }
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
