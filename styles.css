@@ -385,6 +385,7 @@ img {
 .footer-bottom p {
   font-size: 0.85rem;
   color: #fffaf5;
+  text-align: center;
 }
 
 /* ================= RESPONSIVE ================= */
