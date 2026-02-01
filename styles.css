@@ -148,7 +148,6 @@ body {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: #F5F5FC;
   transform: scale(1.1);
 }
 
