@@ -141,12 +141,25 @@ body {
   color: #1F2933; /* your theme color */
   width: 40px;
   height: 40px;
+  background-color: #fffaf5;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #fffaf5;
+  background-color: #F5F5FC;
+  transform: scale(1.1);
 }
+
+/* Make arrows bigger inside circle */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* arrow size */
+  font-weight: bold;
+}
+
+
 
 
 /* ================= SWIPER ================= */
