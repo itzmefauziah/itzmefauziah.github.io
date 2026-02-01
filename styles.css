@@ -337,14 +337,14 @@ img {
 /* Brand */
 .footer-brand h2 {
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #fffaf5;
   margin-bottom: 12px;
 }
 
 .footer-brand p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #cbd5f5;
+  color: #fffaf5;
 }
 
 /* Links */
@@ -366,7 +366,7 @@ img {
 .footer-links a {
   text-decoration: none;
   font-size: 0.95rem;
-  color: #cbd5f5;
+  color: #fffaf5;
   transition: color 0.3s ease;
 }
 
