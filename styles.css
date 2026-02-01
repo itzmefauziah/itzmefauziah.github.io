@@ -501,9 +501,11 @@ img {
   }
   .slide-info h3 {
     font-size: 1.8rem;
+    color: #1F2933;
   }
   .slide-info p {
     font-size: 1rem;
+    color: #1F2933;
   }
 
   /* Travel Guide Cards */
