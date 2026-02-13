@@ -5,7 +5,11 @@
   <title>Istanbul | GoTürkiye</title>
   <meta name="description" content="Explore Istanbul, the vibrant city where East meets West. Discover historical landmarks, cultural experiences, and amazing food.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLightbox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +28,10 @@
   <!-- Istanbul Page Content -->
   <section class="destination-detail">
     <h1>Istanbul</h1>
-    <p>The vibrant city where East meets West, full of history and stunning architecture. Explore the Hagia Sophia, Blue Mosque, Grand Bazaar, and Bosphorus.</p>
+    <p>
+      The vibrant city where East meets West, full of history and stunning architecture.
+      Explore the Hagia Sophia, Blue Mosque, Grand Bazaar, and Bosphorus.
+    </p>
     
     <h2>Main Attractions</h2>
     <ul>
@@ -44,9 +51,56 @@
       <li>Respect mosque etiquette (remove shoes, dress modestly).</li>
       <li>Best time to visit: Spring & Autumn for pleasant weather.</li>
     </ul>
+
+    <!-- Gallery Section -->
+    <h2 class="gallery-title">Istanbul Highlights</h2>
+    <p class="gallery-subtitle">Click images to explore iconic landmarks</p>
+
+    <div class="istanbul-gallery">
+
+      <a href="img/hagia-sophia.jpg"
+         class="glightbox"
+         data-gallery="istanbul"
+         data-title="Hagia Sophia"
+         data-description="Historic landmark · Sultanahmet, Istanbul">
+        <img src="img/hagia-sophia.jpg" alt="Hagia Sophia">
+      </a>
+
+      <a href="img/bluemosque.jpg"
+         class="glightbox"
+         data-gallery="istanbul"
+         data-title="Blue Mosque"
+         data-description="Iconic Ottoman mosque · Sultanahmet, Istanbul">
+        <img src="img/bluemosque.jpg" alt="Blue Mosque">
+      </a>
+
+      <a href="img/Topkapi Palace.jpg"
+         class="glightbox"
+         data-gallery="istanbul"
+         data-title="Topkapi Palace"
+         data-description="Former Ottoman palace · Fatih, Istanbul">
+        <img src="img/Topkapi Palace.jpg" alt="Topkapi Palace">
+      </a>
+
+      <a href="img/Grand Bazaar.jpg"
+         class="glightbox"
+         data-gallery="istanbul"
+         data-title="Grand Bazaar"
+         data-description="World’s oldest covered market · Fatih, Istanbul">
+        <img src="img/Grand Bazaar.jpg" alt="Grand Bazaar">
+      </a>
+
+      <a href="img/Bosphorus Cruise.jpg"
+         class="glightbox"
+         data-gallery="istanbul"
+         data-title="Bosphorus Cruise"
+         data-description="Scenic boat ride between Europe & Asia · Istanbul Strait">
+        <img src="img/Bosphorus Cruise.jpg" alt="Bosphorus Cruise">
+      </a>
+
+    </div>
     
   </section>
-
 
   <!-- Footer -->
   <footer class="footer">
@@ -55,6 +109,7 @@
         <h2>GoTürkiye</h2>
         <p>Discover Turkey’s breathtaking destinations and rich culture.</p>
       </div>
+
       <div class="footer-links">
         <h3>Links</h3>
         <ul>
@@ -64,70 +119,25 @@
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </div>
-
-<h2 class="gallery-title">Istanbul Highlights</h2>
-<p class="gallery-subtitle">Click images to explore iconic landmarks</p>
-
-<div class="istanbul-gallery">
-
-  <a href="img/hagia-sophia.jpg"
-     class="glightbox"
-     data-gallery="istanbul"
-     data-title="Hagia Sophia"
-     data-description="Historic landmark · Sultanahmet, Istanbul">
-    <img src="img/hagia-sophia.jpg" alt="Hagia Sophia">
-  </a>
-
-  <a href="img/bluemosque.jpg"
-     class="glightbox"
-     data-gallery="istanbul"
-     data-title="Blue Mosque"
-     data-description="Iconic Ottoman mosque · Sultanahmet, Istanbul">
-    <img src="img/bluemosque.jpg" alt="Blue Mosque">
-  </a>
-
-  <a href="img/Topkapi Palace.jpg"
-     class="glightbox"
-     data-gallery="istanbul"
-     data-title="Topkapi Palace"
-     data-description="Former Ottoman palace · Fatih, Istanbul">
-    <img src="img/Topkapi Palace.jpg" alt="Topkapi Palace">
-  </a>
-
-  <a href="img/Grand Bazaar.jpg"
-     class="glightbox"
-     data-gallery="istanbul"
-     data-title="Grand Bazaar"
-     data-description="World’s oldest covered market · Fatih, Istanbul">
-    <img src="img/Grand Bazaar.jpg" alt="Grand Bazaar">
-  </a>
-
-  <a href="img/Bosphorus Cruise.jpg"
-     class="glightbox"
-     data-gallery="istanbul"
-     data-title="Bosphorus Cruise"
-     data-description="Scenic boat ride between Europe & Asia · Istanbul Strait">
-    <img src="img/Bosphorus Cruise.jpg" alt="Bosphorus Cruise">
-  </a>
-
-</div>
-
+    </div>
 
     <div class="footer-bottom">
       <p>© 2026 GoTürkiye. All rights reserved.</p>
     </div>
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<script>
-  const lightbox = GLightbox({
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true,
-    zoomable: true
-  });
-</script>
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Initialize GLightbox -->
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      zoomable: true
+    });
+  </script>
 
 </body>
 </html>
