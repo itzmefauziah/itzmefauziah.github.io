@@ -530,7 +530,11 @@ img {
     flex: 1;
   }
 }
-
+.guide-card a {
+  text-decoration: none; /* remove underline */
+  color: inherit;        /* keep text color same as card */
+  display: block;        /* ensures the whole card is clickable */
+}
 
 
 
