@@ -492,6 +492,7 @@ img {
     color: #1F2933;      
     font-size: 1rem;      /* Standard readable size */
     line-height: 1.5;     /* Better spacing between lines */
+  background-color: #fffaf5;
 }
 
 /* ================= RESPONSIVE ================= */
