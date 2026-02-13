@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cappadocia | GoTürkiye</title>
+  <meta name="description" content="Explore Cappadocia, famous for fairy chimneys, cave dwellings, and breathtaking hot air balloon rides.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span class="logo">GoTürkiye</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="travel-guides.html">Travel Guides</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cappadocia Page Content -->
+  <section class="destination-detail">
+    <h1>Cappadocia</h1>
+    <p>
+      Cappadocia is a magical region known for its surreal landscapes, fairy chimneys,
+      underground cities, and unforgettable hot air balloon experiences.
+    </p>
+    
+    <h2>Main Attractions</h2>
+    <ul>
+      <li>Hot Air Balloon Ride</li>
+      <li>Göreme Open-Air Museum</li>
+      <li>Fairy Chimneys</li>
+      <li>Derinkuyu Underground City</li>
+      <li>Uçhisar Castle</li>
+    </ul>
+
+    <h2>Recommended Food</h2>
+    <p>Try pottery kebab (testi kebabı), gözleme, lentil soup, and Turkish desserts.</p>
+
+    <h2>Travel Tips</h2>
+    <ul>
+      <li>Book hot air balloon rides early due to high demand.</li>
+      <li>Wear comfortable shoes for hiking valleys.</li>
+      <li>Best time to visit: April–June & September–October.</li>
+    </ul>
+
+    <!-- Gallery Section -->
+    <h2 class="gallery-title">Cappadocia Highlights</h2>
+    <p class="gallery-subtitle">Click images to explore magical landscapes</p>
+
+    <div class="istanbul-gallery">
+
+      <a href="image/cappadocia-balloon.jpg"
+         class="glightbox"
+         data-gallery="cappadocia"
+         data-title="Hot Air Balloons"
+         data-description="Sunrise balloon flights · Göreme, Cappadocia">
+        <img src="image/cappadocia-balloon.jpg" alt="Cappadocia Hot Air Balloons">
+      </a>
+
+      <a href="image/fairy-chimneys.jpg"
+         class="glightbox"
+         data-gallery="cappadocia"
+         data-title="Fairy Chimneys"
+         data-description="Unique rock formations · Pasabag Valley">
+        <img src="image/fairy-chimneys.jpg" alt="Fairy Chimneys">
+      </a>
+
+      <a href="image/goreme-open-air.jpg"
+         class="glightbox"
+         data-gallery="cappadocia"
+         data-title="Göreme Open-Air Museum"
+         data-description="Rock-cut churches · Göreme, Cappadocia">
+        <img src="image/goreme-open-air.jpg" alt="Göreme Open Air Museum">
+      </a>
+
+      <a href="image/underground-city.jpg"
+         class="glightbox"
+         data-gallery="cappadocia"
+         data-title="Derinkuyu Underground City"
+         data-description="Ancient underground settlement · Derinkuyu">
+        <img src="image/underground-city.jpg" alt="Derinkuyu Underground City">
+      </a>
+
+      <a href="image/uchisar-castle.jpg"
+         class="glightbox"
+         data-gallery="cappadocia"
+         data-title="Uçhisar Castle"
+         data-description="Panoramic viewpoint · Cappadocia">
+        <img src="image/uchisar-castle.jpg" alt="Uchisar Castle">
+      </a>
+
+    </div>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>GoTürkiye</h2>
+        <p>Discover Turkey’s breathtaking destinations and rich culture.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="travel-guides.html">Travel Guides</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 GoTürkiye. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Initialize GLightbox -->
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      zoomable: true
+    });
+  </script>
+
+</body>
+</html>
