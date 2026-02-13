@@ -14,6 +14,7 @@
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HHLYBLB6R"></script>
   <script>
@@ -22,6 +23,43 @@
     gtag('js', new Date());
     gtag('config', 'G-0HHLYBLB6R');
   </script>
+
+  <!-- Popup styling -->
+  <style>
+    /* Popup background */
+    .leaflet-popup-content-wrapper {
+      background-color: #fffaf5; /* popup background color */
+      color: #1F2933;            /* text color */
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;        /* center text and image */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Popup arrow (tip) */
+    .leaflet-popup-tip {
+      background-color: #fffaf5;
+    }
+
+    /* Center images inside popup */
+    .leaflet-popup-content img {
+      display: block;
+      margin: 0 auto 10px auto;
+      max-width: 150px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Optional: link styling */
+    .leaflet-popup-content a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #1F2933;
+    }
+    .leaflet-popup-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -67,14 +105,10 @@
     destinations.forEach(function(dest) {
       L.marker(dest.coords).addTo(map)
         .bindPopup(`
-          <div style="text-align:center;">
-            <h3>${dest.name}</h3>
-           <div>
-         <img src="${dest.img}" style="width:150px; height:auto; margin-bottom:5px;">
-          </div>
-            <p>${dest.desc}</p>
-            <a href="${dest.link}" style="color:#1F2933;">Explore ${dest.name}</a>
-          </div>
+          <h3>${dest.name}</h3>
+          <img src="${dest.img}" alt="${dest.name}">
+          <p>${dest.desc}</p>
+          <a href="${dest.link}">Explore ${dest.name}</a>
         `);
     });
   </script>
@@ -103,4 +137,5 @@
 
 </body>
 </html>
+
 
