@@ -5,6 +5,7 @@
   <title>Destinations | GoTürkiye</title>
   <meta name="description" content="Explore top destinations in Turkey including Istanbul, Cappadocia, Pamukkale, Antalya, and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HHLYBLB6R"></script>
   <script>
@@ -13,8 +14,38 @@
     gtag('js', new Date());
     gtag('config', 'G-0HHLYBLB6R');
   </script>
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Map container */
+    .map-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    .map-container img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #1F2933;
+      border-radius: 12px;
+    }
+
+    /* Tooltip */
+    area {
+      cursor: pointer;
+    }
+
+    /* Optional: hover effect for areas using JS tooltip */
+    .tooltip {
+      position: absolute;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      pointer-events: none;
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -29,69 +60,23 @@
     </ul>
   </nav>
 
-  <!-- Destinations Overview -->
-  <section class="destination">
-    <div class="destination-header">
-      <h1 style ="color: #1F2933">Top Destinations in Turkey</h1>
-      <p>Click on any destination to explore detailed guides, attractions, food, and travel tips.</p>
-    </div>
+  <!-- Header -->
+  <section class="destination-header">
+    <h1 style="color: #1F2933">Top Destinations in Turkey</h1>
+    <p>Click on a region to explore each destination.</p>
+  </section>
 
-    <div class="guide-cards">
-      <!-- Istanbul -->
-      <div class="guide-card">
-        <a href="istanbul.html">
-          <img src="image/istanbul.jpg" alt="Istanbul Skyline">
-          <div class="card-content">
-            <h3>Istanbul</h3>
-            <p>The vibrant city where East meets West, full of history and stunning architecture.</p>
-          </div>
-        </a>
-      </div>
+  <!-- Map -->
+  <section class="map-container">
+    <img src="image/turkey-map.jpg" usemap="#turkeymap" alt="Map of Turkey">
 
-      <!-- Cappadocia -->
-      <div class="guide-card">
-        <a href="cappadocia.html">
-          <img src="image/cappadocia.jpg" alt="Hot air balloons in Cappadocia">
-          <div class="card-content">
-            <h3>Cappadocia</h3>
-            <p>Famous for fairy chimneys, hot air balloons, and unique landscapes.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Pamukkale -->
-      <div class="guide-card">
-        <a href="pamukkale.html">
-          <img src="image/pamukkale.jpg" alt="Pamukkale terraces">
-          <div class="card-content">
-            <h3>Pamukkale</h3>
-            <p>Known for its white terraces of thermal waters and ancient ruins.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Antalya -->
-      <div class="guide-card">
-        <a href="antalya.html">
-          <img src="image/antalya.jpg" alt="Antalya coastline">
-          <div class="card-content">
-            <h3>Antalya</h3>
-            <p>A stunning Mediterranean city with beautiful beaches and historic sites.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Ephesus -->
-      <div class="guide-card">
-        <a href="ephesus.html">
-          <img src="image/ephesus.jpg" alt="Ancient Roman ruins of Ephesus">
-          <div class="card-content">
-            <h3>Ephesus</h3>
-            <p>Home to ancient Roman ruins and one of the best-preserved classical cities.</p>
-          </div>
-        </a>
-      </div>
-    </div>
+    <map name="turkeymap">
+      <area shape="rect" coords="60,50,200,120" href="istanbul.html" alt="Istanbul" title="Istanbul">
+      <area shape="rect" coords="350,180,450,250" href="cappadocia.html" alt="Cappadocia" title="Cappadocia">
+      <area shape="rect" coords="250,400,350,480" href="pamukkale.html" alt="Pamukkale" title="Pamukkale">
+      <area shape="rect" coords="650,420,750,500" href="antalya.html" alt="Antalya" title="Antalya">
+      <area shape="rect" coords="400,280,500,350" href="ephesus.html" alt="Ephesus" title="Ephesus">
+    </map>
   </section>
 
   <!-- Footer -->
@@ -115,6 +100,25 @@
       <p>© 2026 GoTürkiye. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Optional JS for tooltip -->
+  <div class="tooltip" id="tooltip"></div>
+  <script>
+    const tooltip = document.getElementById('tooltip');
+    const areas = document.querySelectorAll('area');
+
+    areas.forEach(area => {
+      area.addEventListener('mousemove', e => {
+        tooltip.style.display = 'block';
+        tooltip.style.left = e.pageX + 10 + 'px';
+        tooltip.style.top = e.pageY + 10 + 'px';
+        tooltip.innerText = area.title;
+      });
+      area.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+    });
+  </script>
 
 </body>
 </html>
