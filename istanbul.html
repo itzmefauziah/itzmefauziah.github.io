@@ -64,38 +64,70 @@
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </div>
- <div class="istanbul-gallery">
-  <a href="img/hagia-sophia.jpg" class="glightbox" data-gallery="istanbul">
-    <img src="img/hagia-sophia.jpg" alt="Haghia Sophia">
+
+<h2 class="gallery-title">Istanbul Highlights</h2>
+<p class="gallery-subtitle">Click images to explore iconic landmarks</p>
+
+<div class="istanbul-gallery">
+
+  <a href="img/hagia-sophia.jpg"
+     class="glightbox"
+     data-gallery="istanbul"
+     data-title="Hagia Sophia"
+     data-description="Historic landmark · Sultanahmet, Istanbul">
+    <img src="img/hagia-sophia.jpg" alt="Hagia Sophia">
   </a>
 
-  <a href="img/bluemosque.jpg" class="glightbox" data-gallery="istanbul">
+  <a href="img/bluemosque.jpg"
+     class="glightbox"
+     data-gallery="istanbul"
+     data-title="Blue Mosque"
+     data-description="Iconic Ottoman mosque · Sultanahmet, Istanbul">
     <img src="img/bluemosque.jpg" alt="Blue Mosque">
   </a>
 
-  <a href="img/Topkapi Palace.jpg" class="glightbox" data-gallery="istanbul">
+  <a href="img/Topkapi Palace.jpg"
+     class="glightbox"
+     data-gallery="istanbul"
+     data-title="Topkapi Palace"
+     data-description="Former Ottoman palace · Fatih, Istanbul">
     <img src="img/Topkapi Palace.jpg" alt="Topkapi Palace">
   </a>
-    <a href="img/Grand Bazaar.jpg" class="glightbox" data-gallery="istanbul">
+
+  <a href="img/Grand Bazaar.jpg"
+     class="glightbox"
+     data-gallery="istanbul"
+     data-title="Grand Bazaar"
+     data-description="World’s oldest covered market · Fatih, Istanbul">
     <img src="img/Grand Bazaar.jpg" alt="Grand Bazaar">
   </a>
-   <a href="img/Bosphorus Cruise.jpg" class="glightbox" data-gallery="istanbul">
-    <img src="img/Bosphorus Cruise.jpg" alt="Grand Bazaar">
+
+  <a href="img/Bosphorus Cruise.jpg"
+     class="glightbox"
+     data-gallery="istanbul"
+     data-title="Bosphorus Cruise"
+     data-description="Scenic boat ride between Europe & Asia · Istanbul Strait">
+    <img src="img/Bosphorus Cruise.jpg" alt="Bosphorus Cruise">
   </a>
-   
+
 </div>
+
 
     <div class="footer-bottom">
       <p>© 2026 GoTürkiye. All rights reserved.</p>
     </div>
   </footer>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
- <script>
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      loop: true
-    });
-  </script>
+ <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true
+  });
+</script>
+
 </body>
 </html>
