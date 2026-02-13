@@ -492,7 +492,33 @@ img {
     color: #1F2933;      
     font-size: 1rem;      /* Standard readable size */
     line-height: 1.5;     /* Better spacing between lines */
-  background-color: #fffaf5;
+}
+.map-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.map-image {
+  width: 100%;
+  display: block;
+}
+
+.map-pin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #7AC5D3;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.map-pin:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+  background-color: #65aab7;
 }
 
 /* ================= RESPONSIVE ================= */
