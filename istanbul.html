@@ -5,6 +5,7 @@
   <title>Istanbul | GoTürkiye</title>
   <meta name="description" content="Explore Istanbul, the vibrant city where East meets West. Discover historical landmarks, cultural experiences, and amazing food.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -45,59 +46,7 @@
     </ul>
     
   </section>
-<section class="destination-swiper">
-  <h2>Top Attractions in Istanbul</h2>
 
-  <div class="swiper myIstanbulSwiper">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide">
-        <img src="image/hagia-sophia.jpg" alt="Hagia Sophia Istanbul">
-        <div class="slide-info">
-          <h3>Hagia Sophia</h3>
-          <p>One of the most iconic landmarks in Istanbul, rich in history and architecture.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <img src="image/bluemosque.jpg" alt="Blue Mosque Istanbul">
-        <div class="slide-info">
-          <h3>Blue Mosque</h3>
-          <p>Famous for its blue Iznik tiles and stunning Ottoman architecture.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <img src="image/Topkapi Palace.jpg" alt="Topkapi Palace Istanbul">
-        <div class="slide-info">
-          <h3>Topkapi Palace</h3>
-          <p>The grand palace of Ottoman sultans for nearly 400 years.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <img src="image/Grand Bazaar.jpg" alt="Grand Bazaar Istanbul">
-        <div class="slide-info">
-          <h3>Grand Bazaar</h3>
-          <p>One of the largest and oldest covered markets in the world.</p>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <img src="image/Bosphorus Cruise.jpg" alt="Bosphorus Cruise Istanbul">
-        <div class="slide-info">
-          <h3>Bosphorus Cruise</h3>
-          <p>Enjoy breathtaking views while cruising between Europe and Asia.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -115,11 +64,32 @@
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </div>
-    </div>
+ <div class="istanbul-gallery">
+  <a href="img/hagia-sophia.jpg" class="glightbox" data-gallery="istanbul">
+    <img src="img/hagia-sophia.jpg" alt="Haghia Sophia">
+  </a>
+
+  <a href="img/bluemosque.jpg" class="glightbox" data-gallery="istanbul">
+    <img src="img/bluemosque.jpg" alt="Blue Mosque">
+  </a>
+
+  <a href="img/Topkapi Palace.jpg" class="glightbox" data-gallery="istanbul">
+    <img src="img/Topkapi Palace.jpg" alt="Topkapi Palace">
+  </a>
+    <a href="img/Grand Bazaar.jpg" class="glightbox" data-gallery="istanbul">
+    <img src="img/Grand Bazaar.jpg" alt="Grand Bazaar">
+  </a>
+   <a href="img/Bosphorus Cruise.jpg" class="glightbox" data-gallery="istanbul">
+    <img src="img/Bosphorus Cruise.jpg" alt="Grand Bazaar">
+  </a>
+   
+</div>
+
     <div class="footer-bottom">
       <p>© 2026 GoTürkiye. All rights reserved.</p>
     </div>
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 </body>
 </html>
