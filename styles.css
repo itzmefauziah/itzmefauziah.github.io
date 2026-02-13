@@ -459,6 +459,24 @@ img {
   border-radius: 10px;
   margin-top: 20px;
 }
+.istanbul-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.istanbul-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.istanbul-gallery img:hover {
+  transform: scale(1.03);
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
