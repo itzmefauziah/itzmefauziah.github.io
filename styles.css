@@ -435,7 +435,9 @@ img {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-
+  .destination-detail h2 ul>li{
+  color: #1F2933;
+}
 .destination-detail p {
   font-size: 1.1rem;
   line-height: 1.6;
