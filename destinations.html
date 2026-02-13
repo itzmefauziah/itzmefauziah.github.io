@@ -5,8 +5,16 @@
   <title>Destinations | GoTürkiye</title>
   <meta name="description" content="Explore top destinations in Turkey including Istanbul, Cappadocia, Pamukkale, Antalya, and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css">
-<!-- Google Analytics -->
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HHLYBLB6R"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,14 +22,6 @@
     gtag('js', new Date());
     gtag('config', 'G-0HHLYBLB6R');
   </script>
- <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
- integrity="sha256-o9N1jH1N3K+3Gp6N8CBgNdP4a4D+4NUlf1z9Z3DrjXM=" crossorigin=""/>
-
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
- integrity="sha256-p9P06QKkQ3t+o3s08bzj1TSKJkpyqz42ryVZt2j1o2o=" crossorigin=""></script>
-
 </head>
 <body>
 
@@ -39,37 +39,43 @@
   <!-- Header -->
   <section class="destination-header">
     <h1 style="color: #1F2933">Top Destinations in Turkey</h1>
-    <p>Click on a region to explore each destination.</p>
+    <p>Click a marker to explore each destination.</p>
   </section>
 
-<div id="turkey-map" style="height: 500px; width: 100%; margin: 20px 0;"></div>
-<script>
-  // Initialize map centered on Turkey
-  var map = L.map('turkey-map').setView([38.9637, 35.2433], 5);
+  <!-- Leaflet Map -->
+  <div id="turkey-map" style="height: 500px; width: 100%; margin: 20px 0;"></div>
 
-  // Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  <script>
+    // Initialize map centered on Turkey
+    var map = L.map('turkey-map').setView([38.9637, 35.2433], 5);
 
-  // Destinations
-  var destinations = [
-    { name: "Istanbul", coords: [41.0082, 28.9784], link: "istanbul.html" },
-    { name: "Cappadocia", coords: [38.6423, 34.8279], link: "cappadocia.html" },
-    { name: "Pamukkale", coords: [37.9141, 29.1186], link: "pamukkale.html" },
-    { name: "Antalya", coords: [36.8969, 30.7133], link: "antalya.html" },
-    { name: "Ephesus", coords: [37.9415, 27.3411], link: "ephesus.html" }
-  ];
+    // OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-  // Add markers with popups
-  destinations.forEach(function(dest) {
-    L.marker(dest.coords)
-      .addTo(map)
-      .bindPopup('<b>' + dest.name + '</b><br><a href="' + dest.link + '">Explore ' + dest.name + '</a>');
-  });
-</script>
+    // Destinations data
+    var destinations = [
+      { name: "Istanbul", coords: [41.0082, 28.9784], link: "istanbul.html", img: "image/istanbul.jpg", desc: "The vibrant city where East meets West." },
+      { name: "Cappadocia", coords: [38.6423, 34.8279], link: "cappadocia.html", img: "image/cappadocia.jpg", desc: "Famous for fairy chimneys and hot air balloons." },
+      { name: "Pamukkale", coords: [37.9141, 29.1186], link: "pamukkale.html", img: "image/pamukkale.jpg", desc: "Known for white terraces of thermal waters." },
+      { name: "Antalya", coords: [36.8969, 30.7133], link: "antalya.html", img: "image/antalya.jpg", desc: "Stunning Mediterranean city with beaches." },
+      { name: "Ephesus", coords: [37.9415, 27.3411], link: "ephesus.html", img: "image/ephesus.jpg", desc: "Ancient Roman ruins and classical city." }
+    ];
 
-
+    // Add markers with custom popups
+    destinations.forEach(function(dest) {
+      L.marker(dest.coords).addTo(map)
+        .bindPopup(`
+          <div style="text-align:center;">
+            <h3>${dest.name}</h3>
+            <img src="${dest.img}" style="width:150px; height:auto; margin-bottom:5px;">
+            <p>${dest.desc}</p>
+            <a href="${dest.link}" style="color:#007BFF;">Explore ${dest.name}</a>
+          </div>
+        `);
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="footer">
@@ -93,24 +99,6 @@
     </div>
   </footer>
 
-  <!-- Optional JS for tooltip -->
-  <div class="tooltip" id="tooltip"></div>
-  <script>
-    const tooltip = document.getElementById('tooltip');
-    const areas = document.querySelectorAll('area');
-
-    areas.forEach(area => {
-      area.addEventListener('mousemove', e => {
-        tooltip.style.display = 'block';
-        tooltip.style.left = e.pageX + 10 + 'px';
-        tooltip.style.top = e.pageY + 10 + 'px';
-        tooltip.innerText = area.title;
-      });
-      area.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
-      });
-    });
-  </script>
-
 </body>
 </html>
+
