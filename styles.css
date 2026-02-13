@@ -480,7 +480,19 @@ img {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
+.gslide-title {
+    color: #1F2933;       
+    font-size: 1.5rem;    /* Make it larger */
+    font-weight: bold;    /* Make it bold */
+    margin-bottom: 5px;   /* Add space below the title */
+}
 
+/* 2. Style the Popup Description (e.g., "Historic landmark...") */
+.gslide-desc {
+    color: ##1F2933;      
+    font-size: 1rem;      /* Standard readable size */
+    line-height: 1.5;     /* Better spacing between lines */
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
