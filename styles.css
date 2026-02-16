@@ -126,7 +126,7 @@ body {
 }
 
 .dropdown:hover .dropdown-menu {
-  display: flex;
+  display: block;
 }
 
 /* ================= HERO ================= */
