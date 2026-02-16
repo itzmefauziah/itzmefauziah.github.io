@@ -108,7 +108,10 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   z-index: 999;
   flex-direction: column;
-  gap: 0;
+}
+
+.ul.dropdown-menu{
+  gap: 10;
 }
 
 .dropdown-menu li a {
