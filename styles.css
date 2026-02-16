@@ -75,7 +75,6 @@ body {
   list-style: none;
   display: flex;
   gap: 40px;
-  flex-direction: column;
 }
 
 /* IMPORTANT FIX */
