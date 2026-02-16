@@ -111,7 +111,6 @@ body {
 }
 .dropdown-menu li {
     margin: 0;       /* remove extra space between items */
-    padding: 8px 12px; /* adjust padding as needed */
     line-height: 1.2;  /* optional, to control spacing inside the item */
 }
 
