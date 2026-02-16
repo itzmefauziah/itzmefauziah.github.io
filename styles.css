@@ -108,6 +108,9 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   z-index: 999;
   flex-direction: column;
+   transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
 }
 .dropdown-menu li {
     margin: 0;       /* remove extra space between items */
@@ -126,7 +129,9 @@ body {
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: block; /* still required for layout */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ================= HERO ================= */
