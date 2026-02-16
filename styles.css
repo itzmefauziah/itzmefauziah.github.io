@@ -103,15 +103,16 @@ body {
   list-style: none;
   min-width: 200px;
   border-radius: 8px;
-  padding: 6px 0;
+  padding:  0;
   display: none;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   z-index: 999;
   flex-direction: column;
 }
-
-.ul.dropdown-menu{
-  gap: 10;
+.dropdown-menu li {
+    margin: 0;       /* remove extra space between items */
+    padding: 8px 12px; /* adjust padding as needed */
+    line-height: 1.2;  /* optional, to control spacing inside the item */
 }
 
 .dropdown-menu li a {
