@@ -49,6 +49,51 @@ body {
 .navbar a:hover {
   color: #7AC5D3;
 }
+
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fffaf5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo{
+  font-size: 24px;
+  font-weight: 700;
+  color: #1F2933 !important;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+/* IMPORTANT FIX */
+.navbar ul li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1F2933;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #7AC5D3;
+}
+
 /* Dropdown Menu */
 .dropdown-menu {
   position: absolute;
@@ -73,12 +118,13 @@ body {
 
 .dropdown-menu li a:hover {
   background: #FFFAF5;
-  color: #c2410c;
+  color: #7AC5D3;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
