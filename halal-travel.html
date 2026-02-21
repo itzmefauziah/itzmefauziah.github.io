@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Halal Travel in Türkiye | GoTürkiye</title>
+  <meta name="description" content="Discover halal-friendly hotels, restaurants, mosques, and Muslim-friendly experiences in Türkiye with GoTürkiye.">
+  <meta name="keywords" content="halal travel Turkey, Muslim friendly Turkey, halal hotels Turkey, halal food Turkey">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Denk+One&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HHLYBLB6R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0HHLYBLB6R');
+  </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <span class="logo">GoTürkiye</span>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a href="#">Destinations ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="istanbul.html">Istanbul</a></li>
+        <li><a href="cappadocia.html">Cappadocia</a></li>
+        <li><a href="pamukkale.html">Pamukkale</a></li>
+        <li><a href="antalya.html">Antalya</a></li>
+        <li><a href="ephesus.html">Ephesus</a></li>
+      </ul>
+    </li>
+
+    <li><a href="travel-guides.html">Travel Guides</a></li>
+    <li><a href="halal-travel.html" class="active">Halal Travel</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero halal-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Halal Travel in Türkiye</h1>
+    <p>Discover halal-friendly hotels, halal food, mosques, and Muslim-friendly travel experiences across Türkiye.</p>
+  </div>
+</section>
+
+<!-- Filters -->
+<section class="halal-section">
+  <div class="container">
+    <h2 class="title">Explore Halal Travel Options</h2>
+
+    <div class="filters">
+      <select id="categoryFilter" onchange="filterData()">
+        <option value="all">All Categories</option>
+        <option value="hotel">Hotels</option>
+        <option value="restaurant">Restaurants</option>
+        <option value="mosque">Mosques</option>
+        <option value="activity">Activities</option>
+      </select>
+
+      <select id="cityFilter" onchange="filterData()">
+        <option value="all">All Cities</option>
+        <option value="Istanbul">Istanbul</option>
+        <option value="Antalya">Antalya</option>
+        <option value="Cappadocia">Cappadocia</option>
+        <option value="Fethiye">Fethiye</option>
+      </select>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>GoTürkiye</h2>
+      <p>Discover Turkey’s breathtaking destinations, rich culture, and unforgettable travel experiences.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="travel-guides.html">Travel Guides</a></li>
+        <li><a href="halal-travel.html">Halal Travel</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 GoTürkiye. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JSON Data Script -->
+<script>
+let halalData = [];
+
+fetch('halal-data.json')
+  .then(res => res.json())
+  .then(data => {
+    halalData = data.halal_places;
+    displayData(halalData);
+  });
+
+function displayData(data){
+  let grid = document.getElementById('grid');
+  grid.innerHTML = "";
+
+  data.forEach(item => {
+    grid.innerHTML += `
+      <div class="card">
+        <img src="uploads/${item.image}" alt="${item.name}">
+        <div class="content">
+          <span class="tag">${item.category}</span>
+          <h3>${item.name}</h3>
+          <p><strong>City:</strong> ${item.city}</p>
+          <p>${item.description}</p>
+        </div>
+      </div>
+    `;
+  });
+}
+
+function filterData(){
+  let category = document.getElementById("categoryFilter").value;
+  let city = document.getElementById("cityFilter").value;
+
+  let filtered = halalData.filter(item => {
+    return (category === "all" || item.category === category) &&
+           (city === "all" || item.city === city);
+  });
+
+  displayData(filtered);
+}
+</script>
+
+</body>
+</html>
+
