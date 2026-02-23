@@ -647,14 +647,14 @@ img {
 
 .contact-hero h1 {
   font-size: 46px;
-  color: #F5F5F5;
+  color: #1F2933;
   margin-bottom: 15px;
   font-weight: 400;
 }
 
 .contact-hero p {
   font-size: 20px;
-  color: #F5F5F5;
+  color: #1F2933;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -675,7 +675,7 @@ img {
 /* Contact Info Card */
 .contact-info {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #fffaf5;
   padding: 40px;
   border-radius: 18px; /* Matches your .guide-card radius */
   box-shadow: 0 8px 22px rgba(0,0,0,0.08); /* Matches your .guide-card shadow */
