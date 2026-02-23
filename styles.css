@@ -626,7 +626,59 @@ img {
   display: block;        /* ensures the whole card is clickable */
 }
 
+.halal-section{
+  padding:80px 20px;
+  background:#f9f9f9;
+}
 
+.filters{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.filters select{
+  padding:10px 14px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card .content{
+  padding:15px;
+}
+
+.tag{
+  background:#0c7c59;
+  color:white;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
