@@ -7,7 +7,7 @@
       "city": "Istanbul",
       "address": "Üsküdar, Istanbul",
       "description": "Largest mosque in Turkey with stunning panoramic views.",
-      "image": "camilca.jpg"
+      "image": "image/camilca.jpg"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "city": "Istanbul",
       "address": "Fatih, Istanbul",
       "description": "Famous halal Turkish grill restaurant.",
-      "image": "zubeyir.jpg"
+      "image": "image/zubeyir.jpg"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "city": "Fethiye",
       "address": "Ölüdeniz, Fethiye",
       "description": "Alcohol-free halal-friendly luxury resort.",
-      "image": "zehra.jpg"
+      "image": "image/zehra.jpg"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "city": "Istanbul",
       "address": "Eminönü Pier",
       "description": "Scenic halal-friendly cruise along the Bosphorus.",
-      "image": "bosphorus.jpg"
+      "image": "imagebosphorus.jpg"
     }
   ]
 }
