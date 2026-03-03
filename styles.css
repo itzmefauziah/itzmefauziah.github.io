@@ -640,6 +640,7 @@ img {
 /* Contact Section & Container */
 .contact-section {
   padding: 100px 20px;
+  background: #fffaf5;
 }
 
 .contact-container {
