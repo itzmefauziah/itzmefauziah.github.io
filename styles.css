@@ -561,7 +561,7 @@ img {
   transition: 0.35s ease;
 }
 
-.istanbul-gallery img:hover {
+.turkiye-gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
