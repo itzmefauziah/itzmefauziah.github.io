@@ -427,78 +427,98 @@ img {
 .gallery .flex > div:hover img {
   transform: scale(1.05);
 }
+
 /* ================= FOOTER ================= */
 .footer {
   background-color: #1F2933;
   color: #fffaf5;
-  padding: 60px 20px 40px;
+  padding: 70px 20px 40px;
 }
-
 
 /* Layout */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 80px;
+  grid-template-columns: 2fr 1fr 1fr;  /* Added extra column support */
+  gap: 60px;
 }
 
 /* Brand */
 .footer-brand h2 {
-  font-size: 1.6rem;
-  color: #fffaf5;
-  margin-bottom: 12px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .footer-brand p {
   font-size: 0.95rem;
-  line-height: 1.6;
-  color: #fffaf5;
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 400px;
 }
 
 /* Links */
 .footer-links h3 {
   font-size: 1.1rem;
-  color: #fffaf5;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.footer-links h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #38bdf8;
+  margin-top: 8px;
 }
 
 .footer-links ul {
-  direction: flex;
-  flex-direction: column;
   list-style: none;
   padding: 0;
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .footer-links a {
   text-decoration: none;
   font-size: 0.95rem;
   color: #fffaf5;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
-
 
 .footer-links a:hover {
   color: #38bdf8;
+  padding-left: 5px; /* modern hover slide effect */
 }
 
-
+/* Bottom */
 .footer-bottom {
   max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid #fffaf5;
+  margin: 50px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 250, 245, 0.2);
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #fffaf5;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer {
+    text-align: center;
+  }
 }
 
 .destination-detail {
@@ -581,23 +601,31 @@ img {
 
 
 /* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .footer-brand {
-    grid-column: span 2;
+  .footer {
+    text-align: center;
   }
 }
 
 @media (max-width: 500px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
-    gap: 50px;
+    gap: 40px;
   }
-  .
+
+  .footer-links ul {
+    padding: 0;
+  }
+
+  .footer-links a:hover {
+    padding-left: 0; /* removes slide effect for small screens */
+  }
 }
 
 /* ================= RESPONSIVE ================= */
