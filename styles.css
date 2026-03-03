@@ -615,28 +615,6 @@ img {
 }
 /* ================= CONTACT US PAGE ================= */
 
-/* Contact Hero Section */
-.contact-hero {
-  height: 60vh;
-  width: 100%;
-  background-image: url("image/istanbul.jpg"); /* Reuses your existing image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: 80px; /* Accounts for your fixed navbar */
-}
-
-/* Dark overlay matching your main hero */
-.contact-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(31, 41, 51, 0.6); /* Uses your #1F2933 color with opacity */
-  z-index: 1;
-}
 
 .contact-hero .hero-content {
   position: relative;
