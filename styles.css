@@ -851,7 +851,17 @@ img {
   margin: 0;
   line-height: 1.2;
 }
+/* Mobile version */
+@media (max-width: 768px) {
+  .footer-links h3 {
+    text-align: center;
+  }
 
+  .footer-links h3::after {
+    width: 30px;
+    margin: 8px auto 0; /* centers the line */
+  }
+}
 .dropdown-footer-menu li a {
   display: block;
   padding: 12px 18px;
