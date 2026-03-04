@@ -858,8 +858,14 @@ img {
   }
 
   .footer-links h3::after {
-    width: 30px;
-    margin: 8px auto 0; /* centers the line */
+   content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background: #7AC5D3;
   }
 }
 .dropdown-footer-menu li a {
